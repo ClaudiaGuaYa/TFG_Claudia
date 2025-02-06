@@ -1,3 +1,3 @@
 README 
 
-Github repository for Claudia Guallarte TFG
+Github repository for Claudia Guallarte's TFG
