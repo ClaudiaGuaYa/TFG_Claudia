@@ -17,8 +17,8 @@ def load_audio(file_path, sr=22050):
     audio, sr = librosa.load(file_path, sr=sr, mono=True)
     return audio, sr
 
-# fit farima model and generate synthetic reverb
-def apply_farima_convolution(audio, order=(1,0,1), steps=500):
+# fit farina model and generate synthetic reverb
+def apply_farina_convolution(audio, order=(1,0,1), steps=500):
     model = SARIMAX(audio, order=order)
     model_fit = model.fit(disp=False)
     synthetic_reverb = model_fit.predict(start=0, end=len(audio) + steps)
@@ -36,9 +36,9 @@ if __name__ == "__main__":
     file_path = download_audio(audio_url)
     audio, sr = load_audio(file_path)
     
-    # farima convolution
-    # synthetic_audio = apply_farima_convolution(audio, (2,1,2))
-    synthetic_audio = apply_farima_convolution(audio)
+    # farina convolution
+    # synthetic_audio = apply_farina_convolution(audio, (2,1,2))
+    synthetic_audio = apply_farina_convolution(audio)
     
     # save the generated audio
     save_audio(f"data/synth/synthetic_reverb{i}.wav", synthetic_audio, sr)
