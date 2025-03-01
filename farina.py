@@ -109,8 +109,10 @@ ir_path = "IRs/Studio Nord Spring 3,0 flat.wav"
 output_path = "data/synth/3.0_flat_convolved.wav"
 ir_folder = "IRs"
 
+#partitioned_fft_convolution(input_path, ir_path, output_path)
+
 def create_json_parameters(ir_folder):
-    #partitioned_fft_convolution(input_path, ir_path, output_path)
+
     data = {}
     for ir_path in os.listdir(ir_folder):
         ir_params = extract_ir_parameters(os.path.join(ir_folder, ir_path))
