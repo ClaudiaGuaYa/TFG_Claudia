@@ -1,208 +1,0 @@
-PyTorch version:2.1.2
-Total dataset size (input/target pairs): 40
-Receptive field: 52429 samples or 1188.9 ms
-==========================================================================================
-Layer (type:depth-idx)                   Output Shape              Param #
-==========================================================================================
-GCN1D                                    [1, 1, 44100]             --
-├─ModuleList: 1-1                        --                        --
-│    └─GCN1DBlock: 2-1                   [1, 32, 44100]            --
-│    │    └─Conv1dCausal: 3-1            [1, 64, 44100]            832
-│    │    └─FiLM: 3-2                    [1, 64, 44100]            512
-│    │    └─GatedAF: 3-3                 [1, 32, 44100]            --
-│    │    └─Conv1d: 3-4                  [1, 32, 44100]            32
-│    └─GCN1DBlock: 2-2                   [1, 32, 44100]            --
-│    │    └─Conv1dCausal: 3-5            [1, 64, 44100]            26,624
-│    │    └─FiLM: 3-6                    [1, 64, 44100]            512
-│    │    └─GatedAF: 3-7                 [1, 32, 44100]            --
-│    │    └─Conv1d: 3-8                  [1, 32, 44100]            1,024
-│    └─GCN1DBlock: 2-3                   [1, 32, 44100]            --
-│    │    └─Conv1dCausal: 3-9            [1, 64, 44100]            26,624
-│    │    └─FiLM: 3-10                   [1, 64, 44100]            512
-│    │    └─GatedAF: 3-11                [1, 32, 44100]            --
-│    │    └─Conv1d: 3-12                 [1, 32, 44100]            1,024
-│    └─GCN1DBlock: 2-4                   [1, 32, 44100]            --
-│    │    └─Conv1dCausal: 3-13           [1, 64, 44100]            26,624
-│    │    └─FiLM: 3-14                   [1, 64, 44100]            512
-│    │    └─GatedAF: 3-15                [1, 32, 44100]            --
-│    │    └─Conv1d: 3-16                 [1, 32, 44100]            1,024
-├─Conv1d: 1-2                            [1, 1, 44100]             32
-├─Tanh: 1-3                              [1, 1, 44100]             --
-==========================================================================================
-Total params: 85,888
-Trainable params: 85,888
-Non-trainable params: 0
-Total mult-adds (Units.GIGABYTES): 3.70
-==========================================================================================
-Input size (MB): 0.18
-Forward/backward pass size (MB): 135.83
-Params size (MB): 0.34
-Estimated Total Size (MB): 136.35
-==========================================================================================
-Selected device for training: cuda
-Training Progress:   0%|          | 0/120 [00:00<?, ?it/s]                                                          Training Progress:   0%|          | 0/120 [00:03<?, ?it/s]Training Progress:   1%|          | 1/120 [00:04<09:32,  4.81s/it]Epoch 0: Loss improved from  inf to 0.062653 -> Saving model
-                                                                  Training Progress:   1%|          | 1/120 [00:07<09:32,  4.81s/it]Training Progress:   2%|▏         | 2/120 [00:08<08:08,  4.14s/it]Epoch 1: Loss improved from 0.062653 to 0.060147 -> Saving model
-Training Progress:   2%|▎         | 3/120 [00:12<07:42,  3.96s/it]                                                                  Training Progress:   2%|▎         | 3/120 [00:15<07:42,  3.96s/it]Training Progress:   3%|▎         | 4/120 [00:15<07:27,  3.86s/it]Epoch 3: Loss improved from 0.060147 to 0.059645 -> Saving model
-                                                                  Training Progress:   3%|▎         | 4/120 [00:18<07:27,  3.86s/it]Training Progress:   4%|▍         | 5/120 [00:19<07:19,  3.82s/it]Epoch 4: Loss improved from 0.059645 to 0.058542 -> Saving model
-                                                                  Training Progress:   4%|▍         | 5/120 [00:22<07:19,  3.82s/it]Training Progress:   5%|▌         | 6/120 [00:23<07:11,  3.79s/it]Epoch 5: Loss improved from 0.058542 to 0.058183 -> Saving model
-                                                                  Training Progress:   5%|▌         | 6/120 [00:26<07:11,  3.79s/it]Training Progress:   6%|▌         | 7/120 [00:27<07:08,  3.79s/it]Epoch 6: Loss improved from 0.058183 to 0.057215 -> Saving model
-                                                                  Training Progress:   6%|▌         | 7/120 [00:30<07:08,  3.79s/it]Training Progress:   7%|▋         | 8/120 [00:30<06:59,  3.75s/it]Epoch 7: Loss improved from 0.057215 to 0.055267 -> Saving model
-                                                                  Training Progress:   7%|▋         | 8/120 [00:33<06:59,  3.75s/it]Training Progress:   8%|▊         | 9/120 [00:34<06:52,  3.71s/it]Epoch 8: Loss improved from 0.055267 to 0.052500 -> Saving model
-                                                                  Training Progress:   8%|▊         | 9/120 [00:37<06:52,  3.71s/it]Training Progress:   8%|▊         | 10/120 [00:38<06:51,  3.74s/it]Epoch 9: Loss improved from 0.052500 to 0.049286 -> Saving model
-                                                                   Training Progress:   8%|▊         | 10/120 [00:41<06:51,  3.74s/it]Training Progress:   9%|▉         | 11/120 [00:42<06:46,  3.73s/it]Epoch 10: Loss improved from 0.049286 to 0.045480 -> Saving model
-                                                                   Training Progress:   9%|▉         | 11/120 [00:44<06:46,  3.73s/it]Training Progress:  10%|█         | 12/120 [00:45<06:43,  3.74s/it]Epoch 11: Loss improved from 0.045480 to 0.040871 -> Saving model
-                                                                   Training Progress:  10%|█         | 12/120 [00:48<06:43,  3.74s/it]Training Progress:  11%|█         | 13/120 [00:49<06:41,  3.75s/it]Epoch 12: Loss improved from 0.040871 to 0.036031 -> Saving model
-                                                                   Training Progress:  11%|█         | 13/120 [00:52<06:41,  3.75s/it]Training Progress:  12%|█▏        | 14/120 [00:53<06:36,  3.74s/it]Epoch 13: Loss improved from 0.036031 to 0.031343 -> Saving model
-                                                                   Training Progress:  12%|█▏        | 14/120 [00:56<06:36,  3.74s/it]Training Progress:  12%|█▎        | 15/120 [00:56<06:31,  3.72s/it]Epoch 14: Loss improved from 0.031343 to 0.027002 -> Saving model
-                                                                   Training Progress:  12%|█▎        | 15/120 [00:59<06:31,  3.72s/it]Training Progress:  13%|█▎        | 16/120 [01:00<06:27,  3.73s/it]Epoch 15: Loss improved from 0.027002 to 0.023476 -> Saving model
-                                                                   Training Progress:  13%|█▎        | 16/120 [01:03<06:27,  3.73s/it]Training Progress:  14%|█▍        | 17/120 [01:04<06:25,  3.74s/it]Epoch 16: Loss improved from 0.023476 to 0.020379 -> Saving model
-                                                                   Training Progress:  14%|█▍        | 17/120 [01:07<06:25,  3.74s/it]Training Progress:  15%|█▌        | 18/120 [01:08<06:18,  3.71s/it]Epoch 17: Loss improved from 0.020379 to 0.018383 -> Saving model
-                                                                   Training Progress:  15%|█▌        | 18/120 [01:11<06:18,  3.71s/it]Training Progress:  16%|█▌        | 19/120 [01:11<06:14,  3.71s/it]Epoch 18: Loss improved from 0.018383 to 0.016430 -> Saving model
-                                                                   Training Progress:  16%|█▌        | 19/120 [01:14<06:14,  3.71s/it]Training Progress:  17%|█▋        | 20/120 [01:15<06:11,  3.72s/it]Epoch 19: Loss improved from 0.016430 to 0.014790 -> Saving model
-                                                                   Training Progress:  17%|█▋        | 20/120 [01:18<06:11,  3.72s/it]Training Progress:  18%|█▊        | 21/120 [01:19<06:06,  3.71s/it]Epoch 20: Loss improved from 0.014790 to 0.013890 -> Saving model
-                                                                   Training Progress:  18%|█▊        | 21/120 [01:22<06:06,  3.71s/it]Training Progress:  18%|█▊        | 22/120 [01:23<06:08,  3.76s/it]Epoch 21: Loss improved from 0.013890 to 0.012629 -> Saving model
-                                                                   Training Progress:  18%|█▊        | 22/120 [01:26<06:08,  3.76s/it]Training Progress:  19%|█▉        | 23/120 [01:26<06:04,  3.76s/it]Epoch 22: Loss improved from 0.012629 to 0.012245 -> Saving model
-                                                                   Training Progress:  19%|█▉        | 23/120 [01:29<06:04,  3.76s/it]Training Progress:  20%|██        | 24/120 [01:30<05:58,  3.73s/it]Epoch 23: Loss improved from 0.012245 to 0.011713 -> Saving model
-                                                                   Training Progress:  20%|██        | 24/120 [01:33<05:58,  3.73s/it]Training Progress:  21%|██        | 25/120 [01:34<05:51,  3.70s/it]Epoch 24: Loss improved from 0.011713 to 0.011263 -> Saving model
-                                                                   Training Progress:  21%|██        | 25/120 [01:36<05:51,  3.70s/it]Training Progress:  22%|██▏       | 26/120 [01:37<05:46,  3.69s/it]Epoch 25: Loss improved from 0.011263 to 0.010952 -> Saving model
-                                                                   Training Progress:  22%|██▏       | 26/120 [01:40<05:46,  3.69s/it]Training Progress:  22%|██▎       | 27/120 [01:41<05:43,  3.69s/it]Epoch 26: Loss improved from 0.010952 to 0.010650 -> Saving model
-                                                                   Training Progress:  22%|██▎       | 27/120 [01:44<05:43,  3.69s/it]Training Progress:  23%|██▎       | 28/120 [01:45<05:39,  3.69s/it]Epoch 27: Loss improved from 0.010650 to 0.010325 -> Saving model
-                                                                   Training Progress:  23%|██▎       | 28/120 [01:48<05:39,  3.69s/it]Training Progress:  24%|██▍       | 29/120 [01:48<05:34,  3.68s/it]Epoch 28: Loss improved from 0.010325 to 0.010127 -> Saving model
-Training Progress:  25%|██▌       | 30/120 [01:52<05:31,  3.69s/it]                                                                   Training Progress:  25%|██▌       | 30/120 [01:55<05:31,  3.69s/it]Training Progress:  26%|██▌       | 31/120 [01:56<05:29,  3.70s/it]Epoch 30: Loss improved from 0.010127 to 0.009731 -> Saving model
-                                                                   Training Progress:  26%|██▌       | 31/120 [01:59<05:29,  3.70s/it]Training Progress:  27%|██▋       | 32/120 [02:00<05:27,  3.72s/it]Epoch 31: Loss improved from 0.009731 to 0.009706 -> Saving model
-                                                                   Training Progress:  27%|██▋       | 32/120 [02:02<05:27,  3.72s/it]Training Progress:  28%|██▊       | 33/120 [02:03<05:22,  3.71s/it]Epoch 32: Loss improved from 0.009706 to 0.009592 -> Saving model
-                                                                   Training Progress:  28%|██▊       | 33/120 [02:06<05:22,  3.71s/it]Training Progress:  28%|██▊       | 34/120 [02:07<05:19,  3.72s/it]Epoch 33: Loss improved from 0.009592 to 0.009359 -> Saving model
-                                                                   Training Progress:  28%|██▊       | 34/120 [02:10<05:19,  3.72s/it]Training Progress:  29%|██▉       | 35/120 [02:11<05:17,  3.74s/it]Epoch 34: Loss improved from 0.009359 to 0.009327 -> Saving model
-                                                                   Training Progress:  29%|██▉       | 35/120 [02:14<05:17,  3.74s/it]Training Progress:  30%|███       | 36/120 [02:14<05:13,  3.74s/it]Epoch 35: Loss improved from 0.009327 to 0.009161 -> Saving model
-Training Progress:  31%|███       | 37/120 [02:18<05:09,  3.73s/it]Training Progress:  32%|███▏      | 38/120 [02:22<05:04,  3.72s/it]                                                                   Training Progress:  32%|███▏      | 38/120 [02:25<05:04,  3.72s/it]Training Progress:  32%|███▎      | 39/120 [02:26<05:00,  3.72s/it]Epoch 38: Loss improved from 0.009161 to 0.008987 -> Saving model
-                                                                   Training Progress:  32%|███▎      | 39/120 [02:29<05:00,  3.72s/it]Training Progress:  33%|███▎      | 40/120 [02:29<04:58,  3.73s/it]Epoch 39: Loss improved from 0.008987 to 0.008733 -> Saving model
-Training Progress:  34%|███▍      | 41/120 [02:33<04:51,  3.70s/it]                                                                   Training Progress:  34%|███▍      | 41/120 [02:36<04:51,  3.70s/it]Training Progress:  35%|███▌      | 42/120 [02:37<04:49,  3.71s/it]Epoch 41: Loss improved from 0.008733 to 0.008529 -> Saving model
-Training Progress:  36%|███▌      | 43/120 [02:40<04:43,  3.68s/it]Training Progress:  37%|███▋      | 44/120 [02:44<04:39,  3.68s/it]Training Progress:  38%|███▊      | 45/120 [02:48<04:35,  3.67s/it]Training Progress:  38%|███▊      | 46/120 [02:51<04:30,  3.66s/it]                                                                   Training Progress:  38%|███▊      | 46/120 [02:54<04:30,  3.66s/it]Training Progress:  39%|███▉      | 47/120 [02:55<04:28,  3.68s/it]Epoch 46: Loss improved from 0.008529 to 0.008341 -> Saving model
-Training Progress:  40%|████      | 48/120 [02:59<04:24,  3.67s/it]Training Progress:  41%|████      | 49/120 [03:02<04:21,  3.68s/it]                                                                   Training Progress:  41%|████      | 49/120 [03:05<04:21,  3.68s/it]Training Progress:  42%|████▏     | 50/120 [03:06<04:19,  3.70s/it]Epoch 49: Loss improved from 0.008341 to 0.008034 -> Saving model
-Training Progress:  42%|████▎     | 51/120 [03:10<04:14,  3.69s/it]Training Progress:  43%|████▎     | 52/120 [03:13<04:10,  3.68s/it]                                                                   Training Progress:  43%|████▎     | 52/120 [03:16<04:10,  3.68s/it]Training Progress:  44%|████▍     | 53/120 [03:17<04:06,  3.68s/it]Epoch 52: Loss improved from 0.008034 to 0.007902 -> Saving model
-Training Progress:  45%|████▌     | 54/120 [03:21<04:03,  3.69s/it]Training Progress:  46%|████▌     | 55/120 [03:25<04:01,  3.71s/it]                                                                   Training Progress:  46%|████▌     | 55/120 [03:28<04:01,  3.71s/it]Training Progress:  47%|████▋     | 56/120 [03:28<03:58,  3.73s/it]Epoch 55: Loss improved from 0.007902 to 0.007800 -> Saving model
-Training Progress:  48%|████▊     | 57/120 [03:32<03:54,  3.72s/it]Training Progress:  48%|████▊     | 58/120 [03:36<03:50,  3.72s/it]Training Progress:  49%|████▉     | 59/120 [03:40<03:47,  3.73s/it]Training Progress:  50%|█████     | 60/120 [03:43<03:44,  3.73s/it]                                                                   Training Progress:  50%|█████     | 60/120 [03:46<03:44,  3.73s/it]Training Progress:  51%|█████     | 61/120 [03:47<03:40,  3.73s/it]Epoch 60: Loss improved from 0.007800 to 0.007741 -> Saving model
-Training Progress:  52%|█████▏    | 62/120 [03:51<03:35,  3.72s/it]Training Progress:  52%|█████▎    | 63/120 [03:54<03:31,  3.72s/it]Training Progress:  53%|█████▎    | 64/120 [03:58<03:30,  3.75s/it]                                                                   Training Progress:  53%|█████▎    | 64/120 [04:01<03:30,  3.75s/it]Training Progress:  54%|█████▍    | 65/120 [04:02<03:26,  3.75s/it]Epoch 64: Loss improved from 0.007741 to 0.007688 -> Saving model
-                                                                   Training Progress:  54%|█████▍    | 65/120 [04:05<03:26,  3.75s/it]Training Progress:  55%|█████▌    | 66/120 [04:06<03:21,  3.74s/it]Epoch 65: Loss improved from 0.007688 to 0.007680 -> Saving model
-                                                                   Training Progress:  55%|█████▌    | 66/120 [04:09<03:21,  3.74s/it]Training Progress:  56%|█████▌    | 67/120 [04:09<03:17,  3.73s/it]Epoch 66: Loss improved from 0.007680 to 0.007624 -> Saving model
-Training Progress:  57%|█████▋    | 68/120 [04:13<03:13,  3.71s/it]                                                                   Training Progress:  57%|█████▋    | 68/120 [04:16<03:13,  3.71s/it]Training Progress:  57%|█████▊    | 69/120 [04:17<03:08,  3.70s/it]Epoch 68: Loss improved from 0.007624 to 0.007424 -> Saving model
-                                                                   Training Progress:  57%|█████▊    | 69/120 [04:20<03:08,  3.70s/it]Training Progress:  58%|█████▊    | 70/120 [04:20<03:05,  3.70s/it]Epoch 69: Loss improved from 0.007424 to 0.007421 -> Saving model
-Training Progress:  59%|█████▉    | 71/120 [04:24<03:01,  3.70s/it]                                                                   Training Progress:  59%|█████▉    | 71/120 [04:27<03:01,  3.70s/it]Training Progress:  60%|██████    | 72/120 [04:28<02:57,  3.69s/it]Epoch 71: Loss improved from 0.007421 to 0.007314 -> Saving model
-Training Progress:  61%|██████    | 73/120 [04:31<02:52,  3.67s/it]                                                                   Training Progress:  61%|██████    | 73/120 [04:34<02:52,  3.67s/it]Training Progress:  62%|██████▏   | 74/120 [04:35<02:50,  3.70s/it]Epoch 73: Loss improved from 0.007314 to 0.007312 -> Saving model
-                                                                   Training Progress:  62%|██████▏   | 74/120 [04:38<02:50,  3.70s/it]Training Progress:  62%|██████▎   | 75/120 [04:39<02:48,  3.75s/it]Epoch 74: Loss improved from 0.007312 to 0.007280 -> Saving model
-                                                                   Training Progress:  62%|██████▎   | 75/120 [04:42<02:48,  3.75s/it]Training Progress:  63%|██████▎   | 76/120 [04:43<02:44,  3.74s/it]Epoch 75: Loss improved from 0.007280 to 0.007216 -> Saving model
-Training Progress:  64%|██████▍   | 77/120 [04:47<02:40,  3.74s/it]Training Progress:  65%|██████▌   | 78/120 [04:50<02:36,  3.74s/it]                                                                   Training Progress:  65%|██████▌   | 78/120 [04:53<02:36,  3.74s/it]Training Progress:  66%|██████▌   | 79/120 [04:54<02:32,  3.72s/it]Epoch 78: Loss improved from 0.007216 to 0.007106 -> Saving model
-Training Progress:  67%|██████▋   | 80/120 [04:58<02:29,  3.74s/it]Training Progress:  68%|██████▊   | 81/120 [05:01<02:25,  3.72s/it]Training Progress:  68%|██████▊   | 82/120 [05:05<02:20,  3.69s/it]Training Progress:  69%|██████▉   | 83/120 [05:09<02:17,  3.71s/it]Training Progress:  70%|███████   | 84/120 [05:12<02:12,  3.69s/it]Training Progress:  71%|███████   | 85/120 [05:16<02:08,  3.68s/it]                                                                   Training Progress:  71%|███████   | 85/120 [05:19<02:08,  3.68s/it]Training Progress:  72%|███████▏  | 86/120 [05:20<02:06,  3.72s/it]Epoch 85: Loss improved from 0.007106 to 0.006930 -> Saving model
-Training Progress:  72%|███████▎  | 87/120 [05:24<02:02,  3.72s/it]Training Progress:  73%|███████▎  | 88/120 [05:27<01:59,  3.73s/it]Training Progress:  74%|███████▍  | 89/120 [05:31<01:56,  3.75s/it]Training Progress:  75%|███████▌  | 90/120 [05:35<01:51,  3.72s/it]Training Progress:  76%|███████▌  | 91/120 [05:39<01:48,  3.73s/it]                                                                   Training Progress:  76%|███████▌  | 91/120 [05:42<01:48,  3.73s/it]Training Progress:  77%|███████▋  | 92/120 [05:42<01:44,  3.72s/it]Epoch 91: Loss improved from 0.006930 to 0.006920 -> Saving model
-Training Progress:  78%|███████▊  | 93/120 [05:46<01:40,  3.71s/it]Training Progress:  78%|███████▊  | 94/120 [05:50<01:35,  3.69s/it]                                                                   Training Progress:  78%|███████▊  | 94/120 [05:53<01:35,  3.69s/it]Training Progress:  79%|███████▉  | 95/120 [05:53<01:32,  3.72s/it]Epoch 94: Loss improved from 0.006920 to 0.006828 -> Saving model
-Training Progress:  80%|████████  | 96/120 [05:57<01:29,  3.72s/it]Training Progress:  81%|████████  | 97/120 [06:01<01:25,  3.70s/it]Training Progress:  82%|████████▏ | 98/120 [06:04<01:21,  3.69s/it]Training Progress:  82%|████████▎ | 99/120 [06:08<01:17,  3.68s/it]Training Progress:  83%|████████▎ | 100/120 [06:12<01:13,  3.68s/it]Training Progress:  84%|████████▍ | 101/120 [06:15<01:09,  3.68s/it]                                                                    Training Progress:  84%|████████▍ | 101/120 [06:18<01:09,  3.68s/it]Training Progress:  85%|████████▌ | 102/120 [06:19<01:06,  3.70s/it]Epoch 101: Loss improved from 0.006828 to 0.006812 -> Saving model
-Training Progress:  86%|████████▌ | 103/120 [06:23<01:02,  3.69s/it]Training Progress:  87%|████████▋ | 104/120 [06:27<00:58,  3.68s/it]Training Progress:  88%|████████▊ | 105/120 [06:30<00:55,  3.70s/it]Training Progress:  88%|████████▊ | 106/120 [06:34<00:51,  3.69s/it]Training Progress:  89%|████████▉ | 107/120 [06:38<00:48,  3.71s/it]Training Progress:  90%|█████████ | 108/120 [06:41<00:44,  3.69s/it]Training Progress:  91%|█████████ | 109/120 [06:45<00:40,  3.70s/it]                                                                    Training Progress:  91%|█████████ | 109/120 [06:48<00:40,  3.70s/it]Training Progress:  92%|█████████▏| 110/120 [06:49<00:37,  3.72s/it]Epoch 109: Loss improved from 0.006812 to 0.006680 -> Saving model
-                                                                    Training Progress:  92%|█████████▏| 110/120 [06:52<00:37,  3.72s/it]Training Progress:  92%|█████████▎| 111/120 [06:52<00:33,  3.70s/it]Epoch 110: Loss improved from 0.006680 to 0.006613 -> Saving model
-Training Progress:  93%|█████████▎| 112/120 [06:56<00:29,  3.69s/it]Training Progress:  94%|█████████▍| 113/120 [07:00<00:25,  3.69s/it]Training Progress:  95%|█████████▌| 114/120 [07:04<00:22,  3.68s/it]Training Progress:  96%|█████████▌| 115/120 [07:07<00:18,  3.68s/it]Training Progress:  97%|█████████▋| 116/120 [07:11<00:14,  3.67s/it]Training Progress:  98%|█████████▊| 117/120 [07:15<00:11,  3.67s/it]Training Progress:  98%|█████████▊| 118/120 [07:18<00:07,  3.68s/it]                                                                    Training Progress:  98%|█████████▊| 118/120 [07:21<00:07,  3.68s/it]Training Progress:  99%|█████████▉| 119/120 [07:22<00:03,  3.69s/it]Epoch 118: Loss improved from 0.006613 to 0.006584 -> Saving model
-Training Progress: 100%|██████████| 120/120 [07:26<00:00,  3.67s/it]Training Progress: 100%|██████████| 120/120 [07:26<00:00,  3.72s/it]
-Evaluating model...
-Processing batches:   0%|          | 0/1 [00:00<?, ?it/s]Processing batches: 100%|██████████| 1/1 [00:02<00:00,  2.25s/it]Processing batches: 100%|██████████| 1/1 [00:02<00:00,  2.27s/it]
-/data/upftfg17/.conda/envs/py39_env/lib/python3.11/site-packages/matplotlib/axes/_axes.py:8264: RuntimeWarning: divide by zero encountered in log10
-  Z = 10. * np.log10(spec)
-INFO:neutone_sdk.utils:Converting model to torchscript...
-INFO:neutone_sdk.utils:Extracting metadata...
-INFO:neutone_sdk.utils:Running model on audio samples...
-Average Evaluation Results:
-eval/mae: 0.0673
-eval/esr: 0.1255
-eval/dc: 0.0006
-eval/mrstft: 1.3961
-Input (dry)
-<IPython.lib.display.Audio object>
-Target
-<IPython.lib.display.Audio object>
-Network Output
-<IPython.lib.display.Audio object>
-==========================================================================================
-Layer (type:depth-idx)                   Output Shape              Param #
-==========================================================================================
-GCN1D                                    [1, 1, 44100]             --
-├─ModuleList: 1-1                        --                        --
-│    └─GCN1DBlock: 2-1                   [1, 32, 44100]            --
-│    │    └─Conv1dCached: 3-1            [1, 64, 44100]            832
-│    │    └─FiLM: 3-2                    [1, 64, 44100]            512
-│    │    └─GatedAF: 3-3                 [1, 32, 44100]            --
-│    │    └─Conv1d: 3-4                  [1, 32, 44100]            32
-│    └─GCN1DBlock: 2-2                   [1, 32, 44100]            --
-│    │    └─Conv1dCached: 3-5            [1, 64, 44100]            26,624
-│    │    └─FiLM: 3-6                    [1, 64, 44100]            512
-│    │    └─GatedAF: 3-7                 [1, 32, 44100]            --
-│    │    └─Conv1d: 3-8                  [1, 32, 44100]            1,024
-│    └─GCN1DBlock: 2-3                   [1, 32, 44100]            --
-│    │    └─Conv1dCached: 3-9            [1, 64, 44100]            26,624
-│    │    └─FiLM: 3-10                   [1, 64, 44100]            512
-│    │    └─GatedAF: 3-11                [1, 32, 44100]            --
-│    │    └─Conv1d: 3-12                 [1, 32, 44100]            1,024
-│    └─GCN1DBlock: 2-4                   [1, 32, 44100]            --
-│    │    └─Conv1dCached: 3-13           [1, 64, 44100]            26,624
-│    │    └─FiLM: 3-14                   [1, 64, 44100]            512
-│    │    └─GatedAF: 3-15                [1, 32, 44100]            --
-│    │    └─Conv1d: 3-16                 [1, 32, 44100]            1,024
-├─Conv1d: 1-2                            [1, 1, 44100]             32
-├─Tanh: 1-3                              [1, 1, 44100]             --
-==========================================================================================
-Total params: 85,888
-Trainable params: 85,888
-Non-trainable params: 0
-Total mult-adds (Units.GIGABYTES): 3.70
-==========================================================================================
-Input size (MB): 0.18
-Forward/backward pass size (MB): 135.83
-Params size (MB): 0.34
-Estimated Total Size (MB): 136.35
-==========================================================================================
-  0%|          | 0/360 [00:00<?, ?it/s]  0%|          | 1/360 [00:00<00:41,  8.65it/s]  8%|▊         | 29/360 [00:00<00:02, 158.10it/s] 17%|█▋        | 62/360 [00:00<00:01, 230.79it/s] 26%|██▋       | 95/360 [00:00<00:00, 267.06it/s] 36%|███▌      | 129/360 [00:00<00:00, 291.00it/s] 45%|████▌     | 163/360 [00:00<00:00, 306.52it/s] 55%|█████▍    | 197/360 [00:00<00:00, 314.31it/s] 64%|██████▍   | 231/360 [00:00<00:00, 320.62it/s] 74%|███████▎  | 265/360 [00:00<00:00, 325.14it/s] 83%|████████▎ | 299/360 [00:01<00:00, 327.76it/s] 92%|█████████▎| 333/360 [00:01<00:00, 330.25it/s]100%|██████████| 360/360 [00:01<00:00, 296.89it/s]
-  0%|          | 0/144 [00:00<?, ?it/s] 24%|██▎       | 34/144 [00:00<00:00, 332.86it/s] 47%|████▋     | 68/144 [00:00<00:00, 332.59it/s] 71%|███████   | 102/144 [00:00<00:00, 331.75it/s] 94%|█████████▍| 136/144 [00:00<00:00, 330.99it/s]100%|██████████| 144/144 [00:00<00:00, 330.78it/s]
-  0%|          | 0/230 [00:00<?, ?it/s] 15%|█▍        | 34/230 [00:00<00:00, 339.44it/s] 30%|██▉       | 68/230 [00:00<00:00, 336.47it/s] 44%|████▍     | 102/230 [00:00<00:00, 334.31it/s] 59%|█████▉    | 136/230 [00:00<00:00, 333.36it/s] 74%|███████▍  | 170/230 [00:00<00:00, 332.92it/s] 89%|████████▉ | 205/230 [00:00<00:00, 335.44it/s]100%|██████████| 230/230 [00:00<00:00, 335.16it/s]
-INFO:neutone_sdk.utils:Validating metadata...
-ERROR:neutone_sdk.metadata:Cannot access link http://arxiv.org/abs/2211.00497
-ERROR:neutone_sdk.metadata:Cannot access link https://github.com/mcomunita/gcn-tfilm
-INFO:neutone_sdk.utils:Saving model to data_filtrado_principio/results_filtrado_principio/neutone_export/model.nm...
-INFO:neutone_sdk.utils:Dumping samples to data_filtrado_principio/results_filtrado_principio/neutone_export/samples...
-INFO:neutone_sdk.utils:Loading saved model and metadata...
-ERROR:neutone_sdk.metadata:Cannot access link http://arxiv.org/abs/2211.00497
-ERROR:neutone_sdk.metadata:Cannot access link https://github.com/mcomunita/gcn-tfilm
-INFO:neutone_sdk.utils:Testing methods used by the VST...
-INFO:neutone_sdk.utils:Running submission checks...
-INFO:neutone_sdk.utils:Assert metadata was saved correctly...
-INFO:neutone_sdk.utils:Assert loaded model output matches output of model before saving...
-  0%|          | 0/360 [00:00<?, ?it/s]  0%|          | 1/360 [00:00<00:36,  9.86it/s]  5%|▍         | 17/360 [00:00<00:03, 96.40it/s] 14%|█▍        | 52/360 [00:00<00:01, 210.20it/s] 24%|██▍       | 88/360 [00:00<00:01, 267.35it/s] 34%|███▍      | 123/360 [00:00<00:00, 296.52it/s] 44%|████▍     | 158/360 [00:00<00:00, 311.84it/s] 54%|█████▎    | 193/360 [00:00<00:00, 322.83it/s] 63%|██████▎   | 228/360 [00:00<00:00, 329.91it/s] 73%|███████▎  | 263/360 [00:00<00:00, 335.05it/s] 83%|████████▎ | 298/360 [00:01<00:00, 338.21it/s] 92%|█████████▎| 333/360 [00:01<00:00, 341.13it/s]100%|██████████| 360/360 [00:01<00:00, 301.85it/s]
-  0%|          | 0/360 [00:00<?, ?it/s]  1%|          | 2/360 [00:00<00:21, 16.57it/s] 10%|█         | 37/360 [00:00<00:01, 195.17it/s] 20%|██        | 73/360 [00:00<00:01, 264.66it/s] 30%|███       | 109/360 [00:00<00:00, 298.97it/s] 40%|████      | 145/360 [00:00<00:00, 319.84it/s] 51%|█████     | 182/360 [00:00<00:00, 334.44it/s] 61%|██████    | 219/360 [00:00<00:00, 344.56it/s] 71%|███████   | 256/360 [00:00<00:00, 350.43it/s] 81%|████████  | 292/360 [00:00<00:00, 351.70it/s] 91%|█████████ | 328/360 [00:01<00:00, 353.67it/s]100%|██████████| 360/360 [00:01<00:00, 320.74it/s]
-INFO:neutone_sdk.utils:Running benchmarks...
-INFO:neutone_sdk.utils:Check out the README for additional information on how to run benchmarks with different parameters and (sample_rate, buffer_size) combinations.
-INFO:neutone_sdk.utils:Running default latency benchmark...
-ERROR:neutone_sdk.metadata:Cannot access link http://arxiv.org/abs/2211.00497
-ERROR:neutone_sdk.metadata:Cannot access link https://github.com/mcomunita/gcn-tfilm
-INFO:neutone_sdk.benchmark:Native buffer sizes: [2048], Native sample rates: [44100]
-INFO:neutone_sdk.benchmark:Model data_filtrado_principio/results_filtrado_principio/neutone_export/model.nm has the following delays for each sample rate / buffer size combination (lowest delay first):
-INFO:neutone_sdk.benchmark:Sample rate:  48000 | Buffer size:    128 | Total delay:   2304 | (Buffering delay:   2304 | Model delay:      0)
-INFO:neutone_sdk.benchmark:Sample rate:  48000 | Buffer size:    256 | Total delay:   2304 | (Buffering delay:   2304 | Model delay:      0)
-INFO:neutone_sdk.benchmark:Sample rate:  48000 | Buffer size:    512 | Total delay:   2560 | (Buffering delay:   2560 | Model delay:      0)
-INFO:neutone_sdk.benchmark:Sample rate:  48000 | Buffer size:   1024 | Total delay:   3072 | (Buffering delay:   3072 | Model delay:      0)
-INFO:neutone_sdk.benchmark:Sample rate:  48000 | Buffer size:   2048 | Total delay:   4096 | (Buffering delay:   4096 | Model delay:      0)
-INFO:neutone_sdk.benchmark:The recommended sample rate / buffer size combination is sample rate 48000, buffer size 128
-INFO:neutone_sdk.utils:Running speed benchmark... If this is taking too long consider disabling the speed_benchmark parameter.
-ERROR:neutone_sdk.metadata:Cannot access link http://arxiv.org/abs/2211.00497
-ERROR:neutone_sdk.metadata:Cannot access link https://github.com/mcomunita/gcn-tfilm
-INFO:neutone_sdk.benchmark:Running benchmark for buffer sizes (128, 256, 512, 1024, 2048) and sample rates (48000,). Outliers will be removed from the calculation of mean and std and displayed separately if existing.
-INFO:neutone_sdk.benchmark:Sample rate:  48000 | Buffer size:    128 | duration:  0.010±0.002 | 1/RTF:  7.904 | Outliers: []
-INFO:neutone_sdk.benchmark:Sample rate:  48000 | Buffer size:    256 | duration:  0.019±0.002 | 1/RTF:  8.611 | Outliers: []
-INFO:neutone_sdk.benchmark:Sample rate:  48000 | Buffer size:    512 | duration:  0.036±0.002 | 1/RTF:  8.867 | Outliers: [0.032]
-INFO:neutone_sdk.benchmark:Sample rate:  48000 | Buffer size:   1024 | duration:  0.070±0.002 | 1/RTF:  9.090 | Outliers: []
-INFO:neutone_sdk.benchmark:Sample rate:  48000 | Buffer size:   2048 | duration:  0.141±0.002 | 1/RTF:  9.071 | Outliers: []
-INFO:neutone_sdk.utils:Your model has been exported successfully!
-INFO:neutone_sdk.utils:You can now test it using the plugin available at https://neutone.space
-INFO:neutone_sdk.utils:Additionally, the parameter helper text is not displayed
-                    correctly when using the local load functionality
-INFO:neutone_sdk.utils:If you are happy with how your model sounds and would
-            like to contribute it to the default list of models, please
-            consider submitting it to our GitHub. Upload only the resulting model.nm
-            somewhere and open an issue on GitHub using the Request add model
-            template available at the following link:
-INFO:neutone_sdk.utils:https://github.com/QosmoInc/neutone_sdk/issues/new?assignees=bogdanteleaga%2C+christhetree&labels=enhancement&template=request-add-model.md&title=%5BMODEL%5D+%3CNAME%3E
-✅ Modelo comprimido en: /data/upftfg17/cguallarte/tests/GCN_neutone_export.zip

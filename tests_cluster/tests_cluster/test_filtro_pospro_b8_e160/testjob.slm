@@ -1,9 +1,0 @@
-#!/bin/bash
-#SBATCH -p gpu
-#SBATCH -n 32
-#SBATCH --gpus-per-node=1
-#SBATCH -t 2:00:00
-module load conda
-conda activate py39_env
-
-python filtrado.py
