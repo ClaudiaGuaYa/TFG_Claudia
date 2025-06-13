@@ -1,0 +1,184 @@
+PyTorch version:2.1.2
+Total dataset size (input/target pairs): 120
+Receptive field: 52429 samples or 1188.9 ms
+==========================================================================================
+Layer (type:depth-idx)                   Output Shape              Param #
+==========================================================================================
+GCN1D                                    [1, 1, 44100]             --
+├─ModuleList: 1-1                        --                        --
+│    └─GCN1DBlock: 2-1                   [1, 32, 44100]            --
+│    │    └─Conv1dCausal: 3-1            [1, 64, 44100]            832
+│    │    └─FiLM: 3-2                    [1, 64, 44100]            512
+│    │    └─GatedAF: 3-3                 [1, 32, 44100]            --
+│    │    └─Conv1d: 3-4                  [1, 32, 44100]            32
+│    └─GCN1DBlock: 2-2                   [1, 32, 44100]            --
+│    │    └─Conv1dCausal: 3-5            [1, 64, 44100]            26,624
+│    │    └─FiLM: 3-6                    [1, 64, 44100]            512
+│    │    └─GatedAF: 3-7                 [1, 32, 44100]            --
+│    │    └─Conv1d: 3-8                  [1, 32, 44100]            1,024
+│    └─GCN1DBlock: 2-3                   [1, 32, 44100]            --
+│    │    └─Conv1dCausal: 3-9            [1, 64, 44100]            26,624
+│    │    └─FiLM: 3-10                   [1, 64, 44100]            512
+│    │    └─GatedAF: 3-11                [1, 32, 44100]            --
+│    │    └─Conv1d: 3-12                 [1, 32, 44100]            1,024
+│    └─GCN1DBlock: 2-4                   [1, 32, 44100]            --
+│    │    └─Conv1dCausal: 3-13           [1, 64, 44100]            26,624
+│    │    └─FiLM: 3-14                   [1, 64, 44100]            512
+│    │    └─GatedAF: 3-15                [1, 32, 44100]            --
+│    │    └─Conv1d: 3-16                 [1, 32, 44100]            1,024
+├─Conv1d: 1-2                            [1, 1, 44100]             32
+├─Tanh: 1-3                              [1, 1, 44100]             --
+==========================================================================================
+Total params: 85,888
+Trainable params: 85,888
+Non-trainable params: 0
+Total mult-adds (Units.GIGABYTES): 3.70
+==========================================================================================
+Input size (MB): 0.18
+Forward/backward pass size (MB): 135.83
+Params size (MB): 0.34
+Estimated Total Size (MB): 136.35
+==========================================================================================
+Selected device for training: cuda
+Training Progress:   0%|          | 0/120 [00:00<?, ?it/s]                                                          Training Progress:   0%|          | 0/120 [00:14<?, ?it/s]Training Progress:   1%|          | 1/120 [00:15<30:55, 15.59s/it]Epoch 0: Loss improved from  inf to 0.016065 -> Saving model
+                                                                  Training Progress:   1%|          | 1/120 [00:21<30:55, 15.59s/it]Training Progress:   2%|▏         | 2/120 [00:22<20:28, 10.41s/it]Epoch 1: Loss improved from 0.016065 to 0.013533 -> Saving model
+                                                                  Training Progress:   2%|▏         | 2/120 [00:28<20:28, 10.41s/it]Training Progress:   2%|▎         | 3/120 [00:29<17:12,  8.82s/it]Epoch 2: Loss improved from 0.013533 to 0.012445 -> Saving model
+Training Progress:   3%|▎         | 4/120 [00:36<15:32,  8.04s/it]Training Progress:   4%|▍         | 5/120 [00:42<14:29,  7.56s/it]Training Progress:   5%|▌         | 6/120 [00:49<13:52,  7.30s/it]Training Progress:   6%|▌         | 7/120 [00:56<13:24,  7.12s/it]Training Progress:   7%|▋         | 8/120 [01:03<13:05,  7.01s/it]Training Progress:   8%|▊         | 9/120 [01:09<12:50,  6.94s/it]Training Progress:   8%|▊         | 10/120 [01:16<12:39,  6.91s/it]Training Progress:   9%|▉         | 11/120 [01:23<12:28,  6.87s/it]Training Progress:  10%|█         | 12/120 [01:30<12:20,  6.86s/it]Training Progress:  11%|█         | 13/120 [01:37<12:12,  6.85s/it]Training Progress:  12%|█▏        | 14/120 [01:43<12:02,  6.82s/it]Epoch 00014: reducing learning rate of group 0 to 5.0000e-04.
+Training Progress:  12%|█▎        | 15/120 [01:50<11:55,  6.81s/it]Training Progress:  13%|█▎        | 16/120 [01:57<11:48,  6.81s/it]Training Progress:  14%|█▍        | 17/120 [02:04<11:40,  6.80s/it]Training Progress:  15%|█▌        | 18/120 [02:11<11:33,  6.80s/it]Training Progress:  16%|█▌        | 19/120 [02:18<11:27,  6.81s/it]Training Progress:  17%|█▋        | 20/120 [02:24<11:20,  6.80s/it]Training Progress:  18%|█▊        | 21/120 [02:31<11:13,  6.80s/it]Training Progress:  18%|█▊        | 22/120 [02:38<11:07,  6.81s/it]Training Progress:  19%|█▉        | 23/120 [02:45<10:59,  6.80s/it]Training Progress:  20%|██        | 24/120 [02:52<10:54,  6.82s/it]Training Progress:  21%|██        | 25/120 [02:58<10:48,  6.83s/it]Epoch 00025: reducing learning rate of group 0 to 2.5000e-04.
+Training Progress:  22%|██▏       | 26/120 [03:05<10:41,  6.83s/it]Training Progress:  22%|██▎       | 27/120 [03:12<10:33,  6.81s/it]Training Progress:  23%|██▎       | 28/120 [03:19<10:27,  6.82s/it]Training Progress:  24%|██▍       | 29/120 [03:26<10:20,  6.82s/it]Training Progress:  25%|██▌       | 30/120 [03:32<10:12,  6.81s/it]Training Progress:  26%|██▌       | 31/120 [03:39<10:05,  6.81s/it]Training Progress:  27%|██▋       | 32/120 [03:46<09:58,  6.80s/it]Training Progress:  28%|██▊       | 33/120 [03:53<09:51,  6.80s/it]Training Progress:  28%|██▊       | 34/120 [04:00<09:44,  6.79s/it]Training Progress:  29%|██▉       | 35/120 [04:06<09:37,  6.79s/it]Training Progress:  30%|███       | 36/120 [04:13<09:29,  6.78s/it]Epoch 00036: reducing learning rate of group 0 to 1.2500e-04.
+Training Progress:  31%|███       | 37/120 [04:20<09:23,  6.79s/it]Training Progress:  32%|███▏      | 38/120 [04:27<09:16,  6.78s/it]Training Progress:  32%|███▎      | 39/120 [04:34<09:09,  6.78s/it]Training Progress:  33%|███▎      | 40/120 [04:40<09:01,  6.77s/it]Training Progress:  34%|███▍      | 41/120 [04:47<08:55,  6.78s/it]Training Progress:  35%|███▌      | 42/120 [04:54<08:49,  6.79s/it]Training Progress:  36%|███▌      | 43/120 [05:01<08:42,  6.79s/it]Training Progress:  37%|███▋      | 44/120 [05:07<08:36,  6.80s/it]Training Progress:  38%|███▊      | 45/120 [05:14<08:29,  6.80s/it]Training Progress:  38%|███▊      | 46/120 [05:21<08:22,  6.79s/it]Training Progress:  39%|███▉      | 47/120 [05:28<08:16,  6.80s/it]Epoch 00047: reducing learning rate of group 0 to 6.2500e-05.
+Training Progress:  40%|████      | 48/120 [05:35<08:09,  6.79s/it]Training Progress:  41%|████      | 49/120 [05:41<08:00,  6.77s/it]Training Progress:  42%|████▏     | 50/120 [05:48<07:54,  6.79s/it]Training Progress:  42%|████▎     | 51/120 [05:55<07:47,  6.78s/it]Training Progress:  43%|████▎     | 52/120 [06:02<07:40,  6.78s/it]Training Progress:  44%|████▍     | 53/120 [06:09<07:34,  6.79s/it]Training Progress:  45%|████▌     | 54/120 [06:15<07:26,  6.77s/it]Training Progress:  46%|████▌     | 55/120 [06:22<07:20,  6.77s/it]Training Progress:  47%|████▋     | 56/120 [06:29<07:15,  6.80s/it]Training Progress:  48%|████▊     | 57/120 [06:36<07:07,  6.79s/it]Training Progress:  48%|████▊     | 58/120 [06:42<07:00,  6.78s/it]Epoch 00058: reducing learning rate of group 0 to 3.1250e-05.
+Training Progress:  49%|████▉     | 59/120 [06:49<06:53,  6.78s/it]Training Progress:  50%|█████     | 60/120 [06:56<06:46,  6.78s/it]Training Progress:  51%|█████     | 61/120 [07:03<06:39,  6.77s/it]Training Progress:  52%|█████▏    | 62/120 [07:10<06:33,  6.78s/it]                                                                   Training Progress:  52%|█████▏    | 62/120 [07:16<06:33,  6.78s/it]Training Progress:  52%|█████▏    | 62/120 [07:16<06:48,  7.04s/it]
+Epoch 62: Loss did not improve for 60 epochs, stopping training
+Evaluating model...
+Processing batches:   0%|          | 0/24 [00:00<?, ?it/s]Processing batches:   4%|▍         | 1/24 [00:01<00:44,  1.93s/it]Processing batches:  25%|██▌       | 6/24 [00:02<00:04,  3.60it/s]Processing batches:  33%|███▎      | 8/24 [00:02<00:03,  4.69it/s]Processing batches:  42%|████▏     | 10/24 [00:02<00:02,  5.40it/s]Processing batches:  50%|█████     | 12/24 [00:02<00:01,  6.43it/s]Processing batches:  58%|█████▊    | 14/24 [00:02<00:01,  7.53it/s]Processing batches:  67%|██████▋   | 16/24 [00:03<00:01,  7.90it/s]Processing batches:  75%|███████▌  | 18/24 [00:03<00:00,  9.60it/s]Processing batches:  83%|████████▎ | 20/24 [00:03<00:00,  9.90it/s]Processing batches:  92%|█████████▏| 22/24 [00:03<00:00, 11.50it/s]Processing batches: 100%|██████████| 24/24 [00:03<00:00,  8.50it/s]Processing batches: 100%|██████████| 24/24 [00:03<00:00,  6.06it/s]
+Average Evaluation Results:
+eval/mae: 0.1347
+eval/esr: 1.0472
+eval/dc: 0.6285
+eval/mrstft: 1.9137
+/data/upftfg17/cguallarte/tests/muulti_testeando.py:957: UserWarning: Only one segment is calculated since parameter NFFT (=256) >= signal length (=1).
+  plt.specgram(
+/data/upftfg17/.conda/envs/py39_env/lib/python3.11/site-packages/matplotlib/axes/_axes.py:8264: RuntimeWarning: divide by zero encountered in log10
+  Z = 10. * np.log10(spec)
+/data/upftfg17/cguallarte/tests/muulti_testeando.py:975: UserWarning: Only one segment is calculated since parameter NFFT (=256) >= signal length (=1).
+  plt.specgram(
+/data/upftfg17/cguallarte/tests/muulti_testeando.py:993: UserWarning: Only one segment is calculated since parameter NFFT (=256) >= signal length (=1).
+  plt.specgram(pred[0].detach().cpu().numpy(), Fs=sample_rate, scale="dB", cmap="inferno")
+INFO:neutone_sdk.utils:Converting model to torchscript...
+INFO:neutone_sdk.utils:Extracting metadata...
+INFO:neutone_sdk.utils:Running model on audio samples...
+
+Resultados por IR en el test set:
+
+IR: IR_2_0
+  eval/mae: 0.1493
+  eval/esr: 1.2494
+  eval/dc: 0.9438
+  eval/mrstft: 1.7462
+
+IR: IR_3_0
+  eval/mae: 0.1250
+  eval/esr: 1.0011
+  eval/dc: 0.3204
+  eval/mrstft: 2.2883
+
+IR: IR_3_5
+  eval/mae: 0.1307
+  eval/esr: 0.9438
+  eval/dc: 0.5959
+  eval/mrstft: 1.8160
+Input (dry)
+<IPython.lib.display.Audio object>
+Target
+<IPython.lib.display.Audio object>
+Network Output
+<IPython.lib.display.Audio object>
+==========================================================================================
+Layer (type:depth-idx)                   Output Shape              Param #
+==========================================================================================
+GCN1D                                    [1, 1, 44100]             --
+├─ModuleList: 1-1                        --                        --
+│    └─GCN1DBlock: 2-1                   [1, 32, 44100]            --
+│    │    └─Conv1dCached: 3-1            [1, 64, 44100]            832
+│    │    └─FiLM: 3-2                    [1, 64, 44100]            512
+│    │    └─GatedAF: 3-3                 [1, 32, 44100]            --
+│    │    └─Conv1d: 3-4                  [1, 32, 44100]            32
+│    └─GCN1DBlock: 2-2                   [1, 32, 44100]            --
+│    │    └─Conv1dCached: 3-5            [1, 64, 44100]            26,624
+│    │    └─FiLM: 3-6                    [1, 64, 44100]            512
+│    │    └─GatedAF: 3-7                 [1, 32, 44100]            --
+│    │    └─Conv1d: 3-8                  [1, 32, 44100]            1,024
+│    └─GCN1DBlock: 2-3                   [1, 32, 44100]            --
+│    │    └─Conv1dCached: 3-9            [1, 64, 44100]            26,624
+│    │    └─FiLM: 3-10                   [1, 64, 44100]            512
+│    │    └─GatedAF: 3-11                [1, 32, 44100]            --
+│    │    └─Conv1d: 3-12                 [1, 32, 44100]            1,024
+│    └─GCN1DBlock: 2-4                   [1, 32, 44100]            --
+│    │    └─Conv1dCached: 3-13           [1, 64, 44100]            26,624
+│    │    └─FiLM: 3-14                   [1, 64, 44100]            512
+│    │    └─GatedAF: 3-15                [1, 32, 44100]            --
+│    │    └─Conv1d: 3-16                 [1, 32, 44100]            1,024
+├─Conv1d: 1-2                            [1, 1, 44100]             32
+├─Tanh: 1-3                              [1, 1, 44100]             --
+==========================================================================================
+Total params: 85,888
+Trainable params: 85,888
+Non-trainable params: 0
+Total mult-adds (Units.GIGABYTES): 3.70
+==========================================================================================
+Input size (MB): 0.18
+Forward/backward pass size (MB): 135.83
+Params size (MB): 0.34
+Estimated Total Size (MB): 136.35
+==========================================================================================
+  0%|          | 0/360 [00:00<?, ?it/s]  0%|          | 1/360 [00:00<00:48,  7.47it/s]  8%|▊         | 28/360 [00:00<00:02, 141.74it/s] 17%|█▋        | 61/360 [00:00<00:01, 220.20it/s] 26%|██▋       | 95/360 [00:00<00:01, 258.88it/s] 36%|███▌      | 129/360 [00:00<00:00, 284.71it/s] 45%|████▌     | 163/360 [00:00<00:00, 299.93it/s] 55%|█████▍    | 197/360 [00:00<00:00, 310.31it/s] 64%|██████▍   | 231/360 [00:00<00:00, 318.29it/s] 73%|███████▎  | 264/360 [00:00<00:00, 319.28it/s] 82%|████████▎ | 297/360 [00:01<00:00, 319.30it/s] 92%|█████████▏| 330/360 [00:01<00:00, 320.46it/s]100%|██████████| 360/360 [00:01<00:00, 287.58it/s]
+  0%|          | 0/144 [00:00<?, ?it/s] 22%|██▏       | 32/144 [00:00<00:00, 318.93it/s] 44%|████▍     | 64/144 [00:00<00:00, 316.21it/s] 67%|██████▋   | 97/144 [00:00<00:00, 319.59it/s] 90%|█████████ | 130/144 [00:00<00:00, 320.91it/s]100%|██████████| 144/144 [00:00<00:00, 320.24it/s]
+  0%|          | 0/230 [00:00<?, ?it/s] 14%|█▍        | 32/230 [00:00<00:00, 318.96it/s] 28%|██▊       | 64/230 [00:00<00:00, 313.50it/s] 42%|████▏     | 96/230 [00:00<00:00, 316.33it/s] 56%|█████▌    | 129/230 [00:00<00:00, 318.75it/s] 70%|███████   | 161/230 [00:00<00:00, 317.71it/s] 84%|████████▍ | 193/230 [00:00<00:00, 316.76it/s] 98%|█████████▊| 225/230 [00:00<00:00, 313.17it/s]100%|██████████| 230/230 [00:00<00:00, 314.91it/s]
+INFO:neutone_sdk.utils:Validating metadata...
+ERROR:neutone_sdk.metadata:Cannot access link http://arxiv.org/abs/2211.00497
+ERROR:neutone_sdk.metadata:Cannot access link https://github.com/mcomunita/gcn-tfilm
+INFO:neutone_sdk.utils:Saving model to data_multi_IR/results_multi_IR/neutone_export/model.nm...
+INFO:neutone_sdk.utils:Dumping samples to data_multi_IR/results_multi_IR/neutone_export/samples...
+INFO:neutone_sdk.utils:Loading saved model and metadata...
+ERROR:neutone_sdk.metadata:Cannot access link http://arxiv.org/abs/2211.00497
+ERROR:neutone_sdk.metadata:Cannot access link https://github.com/mcomunita/gcn-tfilm
+INFO:neutone_sdk.utils:Testing methods used by the VST...
+INFO:neutone_sdk.utils:Running submission checks...
+INFO:neutone_sdk.utils:Assert metadata was saved correctly...
+INFO:neutone_sdk.utils:Assert loaded model output matches output of model before saving...
+  0%|          | 0/360 [00:00<?, ?it/s]  1%|          | 2/360 [00:00<00:26, 13.28it/s] 10%|▉         | 35/360 [00:00<00:01, 165.82it/s] 19%|█▉        | 68/360 [00:00<00:01, 232.00it/s] 28%|██▊       | 102/360 [00:00<00:00, 271.06it/s] 38%|███▊      | 136/360 [00:00<00:00, 292.35it/s] 48%|████▊     | 171/360 [00:00<00:00, 310.70it/s] 57%|█████▊    | 207/360 [00:00<00:00, 323.84it/s] 68%|██████▊   | 243/360 [00:00<00:00, 333.16it/s] 78%|███████▊  | 279/360 [00:00<00:00, 338.65it/s] 88%|████████▊ | 315/360 [00:01<00:00, 342.32it/s] 97%|█████████▋| 350/360 [00:01<00:00, 343.61it/s]100%|██████████| 360/360 [00:01<00:00, 300.59it/s]
+  0%|          | 0/360 [00:00<?, ?it/s]  1%|          | 2/360 [00:00<00:21, 16.56it/s] 10%|█         | 36/360 [00:00<00:01, 189.75it/s] 19%|█▉        | 70/360 [00:00<00:01, 254.05it/s] 29%|██▉       | 105/360 [00:00<00:00, 288.04it/s] 39%|███▉      | 140/360 [00:00<00:00, 307.31it/s] 49%|████▊     | 175/360 [00:00<00:00, 319.98it/s] 59%|█████▊    | 211/360 [00:00<00:00, 331.26it/s] 69%|██████▊   | 247/360 [00:00<00:00, 338.42it/s] 78%|███████▊  | 282/360 [00:00<00:00, 341.86it/s] 88%|████████▊ | 317/360 [00:01<00:00, 341.18it/s] 98%|█████████▊| 352/360 [00:01<00:00, 341.08it/s]100%|██████████| 360/360 [00:01<00:00, 309.54it/s]
+INFO:neutone_sdk.utils:Running benchmarks...
+INFO:neutone_sdk.utils:Check out the README for additional information on how to run benchmarks with different parameters and (sample_rate, buffer_size) combinations.
+INFO:neutone_sdk.utils:Running default latency benchmark...
+ERROR:neutone_sdk.metadata:Cannot access link http://arxiv.org/abs/2211.00497
+ERROR:neutone_sdk.metadata:Cannot access link https://github.com/mcomunita/gcn-tfilm
+INFO:neutone_sdk.benchmark:Native buffer sizes: [2048], Native sample rates: [44100]
+INFO:neutone_sdk.benchmark:Model data_multi_IR/results_multi_IR/neutone_export/model.nm has the following delays for each sample rate / buffer size combination (lowest delay first):
+INFO:neutone_sdk.benchmark:Sample rate:  48000 | Buffer size:    128 | Total delay:   2304 | (Buffering delay:   2304 | Model delay:      0)
+INFO:neutone_sdk.benchmark:Sample rate:  48000 | Buffer size:    256 | Total delay:   2304 | (Buffering delay:   2304 | Model delay:      0)
+INFO:neutone_sdk.benchmark:Sample rate:  48000 | Buffer size:    512 | Total delay:   2560 | (Buffering delay:   2560 | Model delay:      0)
+INFO:neutone_sdk.benchmark:Sample rate:  48000 | Buffer size:   1024 | Total delay:   3072 | (Buffering delay:   3072 | Model delay:      0)
+INFO:neutone_sdk.benchmark:Sample rate:  48000 | Buffer size:   2048 | Total delay:   4096 | (Buffering delay:   4096 | Model delay:      0)
+INFO:neutone_sdk.benchmark:The recommended sample rate / buffer size combination is sample rate 48000, buffer size 128
+INFO:neutone_sdk.utils:Running speed benchmark... If this is taking too long consider disabling the speed_benchmark parameter.
+ERROR:neutone_sdk.metadata:Cannot access link http://arxiv.org/abs/2211.00497
+ERROR:neutone_sdk.metadata:Cannot access link https://github.com/mcomunita/gcn-tfilm
+INFO:neutone_sdk.benchmark:Running benchmark for buffer sizes (128, 256, 512, 1024, 2048) and sample rates (48000,). Outliers will be removed from the calculation of mean and std and displayed separately if existing.
+INFO:neutone_sdk.benchmark:Sample rate:  48000 | Buffer size:    128 | duration:  0.010±0.002 | 1/RTF:  7.942 | Outliers: []
+INFO:neutone_sdk.benchmark:Sample rate:  48000 | Buffer size:    256 | duration:  0.019±0.003 | 1/RTF:  8.618 | Outliers: []
+INFO:neutone_sdk.benchmark:Sample rate:  48000 | Buffer size:    512 | duration:  0.036±0.001 | 1/RTF:  8.770 | Outliers: [0.031]
+INFO:neutone_sdk.benchmark:Sample rate:  48000 | Buffer size:   1024 | duration:  0.071±0.002 | 1/RTF:  8.980 | Outliers: []
+INFO:neutone_sdk.benchmark:Sample rate:  48000 | Buffer size:   2048 | duration:  0.139±0.003 | 1/RTF:  9.195 | Outliers: []
+INFO:neutone_sdk.utils:Your model has been exported successfully!
+INFO:neutone_sdk.utils:You can now test it using the plugin available at https://neutone.space
+INFO:neutone_sdk.utils:Additionally, the parameter helper text is not displayed
+                    correctly when using the local load functionality
+INFO:neutone_sdk.utils:If you are happy with how your model sounds and would
+            like to contribute it to the default list of models, please
+            consider submitting it to our GitHub. Upload only the resulting model.nm
+            somewhere and open an issue on GitHub using the Request add model
+            template available at the following link:
+INFO:neutone_sdk.utils:https://github.com/QosmoInc/neutone_sdk/issues/new?assignees=bogdanteleaga%2C+christhetree&labels=enhancement&template=request-add-model.md&title=%5BMODEL%5D+%3CNAME%3E
+✅ Modelo comprimido en: /data/upftfg17/cguallarte/tests/GCN_neutone_export.zip

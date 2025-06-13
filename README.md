@@ -1,5 +1,5 @@
 
-# Dataset Generation for Virtual Analog Modelling of Reverberation Effect
+# Dataset Generation for Virtual Analog Modelling with Neural Network Models
 
 This repository contains the code and resources for Claudia Guallarte's final degree project (TFG). The project focuses on generating datasets for virtual analog modelling of reverberation effects, a key aspect of audio signal processing and digital sound design.
 
