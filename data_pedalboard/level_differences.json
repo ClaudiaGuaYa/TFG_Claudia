@@ -1,0 +1,162 @@
+{
+  "1": {
+    "peak_diff_db": -24.62,
+    "rms_diff_db": -24.63
+  },
+  "10": {
+    "peak_diff_db": -26.72,
+    "rms_diff_db": -26.71
+  },
+  "11": {
+    "peak_diff_db": -25.95,
+    "rms_diff_db": -25.94
+  },
+  "12": {
+    "peak_diff_db": -31.24,
+    "rms_diff_db": -31.24
+  },
+  "13": {
+    "peak_diff_db": -25.25,
+    "rms_diff_db": -25.24
+  },
+  "14": {
+    "peak_diff_db": -25.58,
+    "rms_diff_db": -25.58
+  },
+  "15": {
+    "peak_diff_db": -25.27,
+    "rms_diff_db": -25.27
+  },
+  "16": {
+    "peak_diff_db": -23.26,
+    "rms_diff_db": -23.26
+  },
+  "17": {
+    "peak_diff_db": -30.41,
+    "rms_diff_db": -30.41
+  },
+  "18": {
+    "peak_diff_db": -26.24,
+    "rms_diff_db": -26.24
+  },
+  "19": {
+    "peak_diff_db": -31.01,
+    "rms_diff_db": -31.02
+  },
+  "2": {
+    "peak_diff_db": -29.26,
+    "rms_diff_db": -29.26
+  },
+  "20": {
+    "peak_diff_db": -27.5,
+    "rms_diff_db": -27.5
+  },
+  "21": {
+    "peak_diff_db": -29.6,
+    "rms_diff_db": -29.61
+  },
+  "22": {
+    "peak_diff_db": -20.5,
+    "rms_diff_db": -20.5
+  },
+  "23": {
+    "peak_diff_db": -32.48,
+    "rms_diff_db": -32.49
+  },
+  "24": {
+    "peak_diff_db": -29.87,
+    "rms_diff_db": -29.87
+  },
+  "25": {
+    "peak_diff_db": -33.98,
+    "rms_diff_db": -33.98
+  },
+  "26": {
+    "peak_diff_db": -27.38,
+    "rms_diff_db": -27.38
+  },
+  "27": {
+    "peak_diff_db": -23.82,
+    "rms_diff_db": -23.82
+  },
+  "28": {
+    "peak_diff_db": -28.75,
+    "rms_diff_db": -28.74
+  },
+  "29": {
+    "peak_diff_db": -23.93,
+    "rms_diff_db": -23.93
+  },
+  "3": {
+    "peak_diff_db": -27.42,
+    "rms_diff_db": -27.42
+  },
+  "30": {
+    "peak_diff_db": -24.62,
+    "rms_diff_db": -24.62
+  },
+  "31": {
+    "peak_diff_db": -31.17,
+    "rms_diff_db": -31.17
+  },
+  "32": {
+    "peak_diff_db": -26.18,
+    "rms_diff_db": -26.18
+  },
+  "33": {
+    "peak_diff_db": -25.19,
+    "rms_diff_db": -25.18
+  },
+  "34": {
+    "peak_diff_db": -32.28,
+    "rms_diff_db": -32.27
+  },
+  "35": {
+    "peak_diff_db": -30.61,
+    "rms_diff_db": -30.6
+  },
+  "36": {
+    "peak_diff_db": -29.62,
+    "rms_diff_db": -29.62
+  },
+  "37": {
+    "peak_diff_db": -23.49,
+    "rms_diff_db": -23.48
+  },
+  "38": {
+    "peak_diff_db": -21.94,
+    "rms_diff_db": -21.94
+  },
+  "39": {
+    "peak_diff_db": -31.91,
+    "rms_diff_db": -31.91
+  },
+  "4": {
+    "peak_diff_db": -29.37,
+    "rms_diff_db": -29.36
+  },
+  "40": {
+    "peak_diff_db": -18.95,
+    "rms_diff_db": -19.16
+  },
+  "5": {
+    "peak_diff_db": -26.86,
+    "rms_diff_db": -26.87
+  },
+  "6": {
+    "peak_diff_db": -20.66,
+    "rms_diff_db": -20.66
+  },
+  "7": {
+    "peak_diff_db": -34.13,
+    "rms_diff_db": -34.14
+  },
+  "8": {
+    "peak_diff_db": -26.48,
+    "rms_diff_db": -26.48
+  },
+  "9": {
+    "peak_diff_db": -20.64,
+    "rms_diff_db": -20.64
+  }
+}
