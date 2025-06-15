@@ -153,4 +153,4 @@ for archivo in os.listdir(entrada_dir):
 
     torchaudio.save(ruta_salida, salida, sample_rate)
 
-print("✅ Todos los archivos han sido procesados.")
+print("Todos los archivos han sido procesados.")
