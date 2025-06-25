@@ -3,7 +3,7 @@
 
 This repository contains the code and resources for Claudia Guallarte's final degree project (TFG). The project focuses on generating datasets for virtual analog modelling of reverberation effects, a key aspect of audio signal processing and digital sound design.
 
-Dataset used is extracted from Yu-Hua Chen's <a href="https://drive.google.com/drive/folders/1h9DrB4dk4QstgjNaHh7lL7IMeKdYw82_?usp=share_link">Google Drive Link</a> .
+EGDB Dataset used is extracted from Yu-Hua Chen's <a href="https://drive.google.com/drive/folders/1h9DrB4dk4QstgjNaHh7lL7IMeKdYw82_?usp=share_link">Google Drive Link</a> .
 
 ## Table of Contents
 
